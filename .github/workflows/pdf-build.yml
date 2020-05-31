@@ -23,7 +23,7 @@ jobs:
       - name: Prepare files
         run: |
           mkdir deployment
-          cp report.pdf "deployment/InVivo AI – Report.pdf"
+          cp report.pdf "deployment/InVivo AI Report.pdf"
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v3
