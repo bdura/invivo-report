@@ -1,0 +1,58 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{language}[2018/09/12 Zibou]
+
+\DeclareOption{english}{
+  % Figure
+  \gdef\@textfigure{figure }
+  \gdef\@textFigure{Figure }
+
+  % Table
+  \gdef\@texttable{table }
+  \gdef\@textTable{Table }
+
+  % Appendix
+  \gdef\@textappendix{appendix }
+  \gdef\@textAppendix{Appendix }
+
+  % Equations
+  \gdef\@texteq{equation }
+  \gdef\@textEq{Equation }
+
+  % Algorithms
+  \gdef\@textalgo{algorithm }
+  \gdef\@textAlgo{Algorithm }
+
+  % Titres
+  \gdef\@textAuthor{Author}
+  \gdef\@textSupervizor{Supervizor}
+}
+
+\DeclareOption{francais}{
+  % Figure
+  \gdef\@textfigure{figure }
+  \gdef\@textFigure{Figure }
+
+  % Table
+  \gdef\@texttable{tableau }
+  \gdef\@textTable{Tableau }
+
+  % Appendix
+  \gdef\@textappendix{appendice }
+  \def\textAppendix{Appendice }
+
+  % Equations
+  \gdef\@texteq{équation }
+  \gdef\@textEq{Équation }
+
+  % Algorithms
+  \gdef\@textalgo{algorithme }
+  \gdef\@textAlgo{Algorithme }
+
+  % Titres
+  \gdef\@textAuthor{Auteur }
+  \gdef\@textSupervizor{Superviseur }
+}
+
+\ProcessOptions\relax
+
+\endinput
