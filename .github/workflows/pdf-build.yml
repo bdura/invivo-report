@@ -15,11 +15,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Compile French LaTeX document 📖
+      - name: Compile LaTeX document 📖
         uses: xu-cheng/latex-action@master
         with:
           root_file: report.tex
-          
+
       - name: Prepare files
         run: |
           mkdir deployment
