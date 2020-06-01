@@ -23,12 +23,12 @@ jobs:
       - name: Prepare files
         run: |
           mkdir deployment
-          cp report.pdf "deployment/InVivo AI Report.pdf"
+          cp report.pdf "deployment/Meta-learning for drug discovery.pdf"
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BRANCH: report # The branch the action should deploy to.
+          BRANCH: gh-pages # The branch the action should deploy to.
           FOLDER: deployment # The folder the action should deploy.
           CLEAN: true
