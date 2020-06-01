@@ -25,10 +25,16 @@ jobs:
           mkdir deployment
           cp report.pdf "deployment/Meta-learning for drug discovery.pdf"
 
+      - name: Install SSH Client 🔑
+        uses: webfactory/ssh-agent@v0.2.0
+        with:
+          ssh-private-key: ${{ secrets.DEPLOY_KEY }}
+
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          SSH: true
+          REPOSITORY_NAME: bdura/pages
+          TARGET_FOLDER: assets/files
           BRANCH: gh-pages # The branch the action should deploy to.
           FOLDER: deployment # The folder the action should deploy.
-          CLEAN: true
