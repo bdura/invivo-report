@@ -302,7 +302,7 @@ Artificial intelligence holds the promise of enabling not only fast and accurate
 
 Computational drug discovery can be summarised into three distinct but coupled problems:
 \begin{enumerate}
-  \item \textit{Scoring}. ``Scoring'' a molecule, or estimating its properties, is the first building block of an artificial intelligence that can help discover new drugs. Computational biochemists talk of \textit{quantitative structure–activity relationship} (QSAR) modelling. The properties regularly tested are known as ADME/Tox for ``absorption, distribution, metabolism, excretion'' and toxicity.
+  \item \textit{Scoring}. ``Scoring'' a molecule, or estimating its properties, is the first building block of an artificial intelligence that can help discover new drugs. Computational biochemists speak of \textit{quantitative structure–activity relationship} (QSAR) modelling. The properties regularly tested are known as ADME/Tox for ``absorption, distribution, metabolism, excretion'' and toxicity.
 
   \item \textit{Generation}. There are an estimated $10^{60}$ possible small molecules \citep{chemicalspace}, while the largest molecular databases hold at most a hundred millions of them. Until now, the industry has been relying on candidate compounds with poor diversity relative to the unfathomable size of the unexplored chemical space.
 
@@ -367,9 +367,9 @@ Astonishingly, a team of researchers obtained near-state-of-the-art results by u
 
 \subsubsection{Compositionality and extrapolation}
 
-Given the immensity of the molecular space, it quickly becomes paramount to be able to extrapolate, at least to some extent, the insights gathered on the training data to unseen regions of the molecular space.
+Given the immensity of the molecular space, it quickly becomes paramount to be able to extrapolate, at least to some extent, the insights gathered on the training data to unseen regions of the operating space.
 
-However, the above statement is problematic. As of today, machine-learning algorithms are essentially function approximators that are very effective at \textit{interpolating} between datapoints, provided there come in sufficient numbers. On the other hand, extrapolation is not only elusive but also impossible without formulating some heavy assumptions on the structure of the problem.
+However, the above statement is problematic. As of today, machine-learning algorithms are essentially function approximators that are very effective at \textit{interpolating} between datapoints, provided they come in sufficient numbers. On the other hand, extrapolation is not only elusive but also impossible without formulating some heavy assumptions on the structure of the problem.
 
 Consider \fig{extrapolation}, that represents four univariable functions that coincide perfectly on some region of the reals. Imagine now that we train an algorithm on the shared portion of the $x$ axis: how could it decide which function best describes the training data once we go beyond their scope ?
 
@@ -390,7 +390,7 @@ In the case of drug discovery and more specifically molecular scoring, the under
 
 If you can retrieve the compositional structure of a problem, provided it exists, then you get two precious assets. First, the amount of data needed to train your model is substantially reduced: in the case of Hooke's law, you only need a single measurement to estimate the stiffness of the spring. Second, the compositional nature of the problem means that you may apply it far from the training examples.
 
-Hence, we posit that much of a compound's activity is driven by the interactions between its chemical substructures, along with some fringe region-specific adjustments. That is to say, we do not discart region-specific knowledge as non-informative. Rather, we hypothesise the bulk of a compound's property can be inferred by looking at features that are compositional, and thus apply in a broader region of the molecular space.
+Hence, we posit that much of a compound's activity is driven by the interactions between its chemical substructures, along with some fringe region-specific adjustments. That is to say, we do not discard region-specific knowledge as non-informative. Rather, we hypothesise the bulk of a compound's property can be inferred by looking at features that are compositional, and thus apply in a broader region of the molecular space.
 
 At this point, you might get anxious that the assumption may not hold, and computational drug discovery be doomed. Let me share some reassuring thoughts.
 \begin{itemize}
@@ -835,7 +835,7 @@ More formally, let $f_\theta$ be a machine-learning model parametrised by $\thet
   \begin{algorithmic}[1]
     \REQUIRE $\tau(t)$: distribution over tasks
     \REQUIRE $\alpha$, $\beta$: step size hyper-parameters
-    \STATE Randomly initialize $\theta$
+    \STATE Randomly initialise $\theta$
     \WHILE{not done}
       \STATE Sample batch $T$ of tasks $t \sim \tau(t)$
       \FORALL{$t$}
